@@ -1,9 +1,16 @@
 # JavaScript-q6
 
-What is a higher order function? 
+What is a higher-order function? 
 A higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.
 
-const firstOrderFunc = () =>
-  console.log("Hello, I am a First order function");
-const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
-higherOrder(firstOrderFunc);
+**Example Program:-**
+
+const greet = function (name) {
+    return function (m) {
+
+        console.log(`Hi!! ${name}, ${m}`);
+    }
+}
+
+const greet_message = greet('ABC');
+greet_message("Welcome To Java Sript programming world")
